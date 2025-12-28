@@ -13,7 +13,7 @@ const About = () => {
           <div className="relative group">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://readdy.ai/api/search-image?query=professional%20female%20nutritionist%20dietitian%20consulting%20with%20patient%20in%20modern%20bright%20clinic%20office%20showing%20healthy%20meal%20plan%20natural%20lighting%20warm%20atmosphere%20medical%20consultation%20photography%20high%20quality&width=600&height=700&seq=about-consultation&orientation=portrait"
+                src="/images/about-dietitian.png"
                 alt="Diyetisyen Ayşenur Korkmaz Danışmanlık"
                 className="w-full h-auto object-cover object-top group-hover:scale-105 transition-transform duration-700"
               />
