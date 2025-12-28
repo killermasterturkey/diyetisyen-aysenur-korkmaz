@@ -84,7 +84,7 @@ const AboutPage = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
               <img
-                src="https://readdy.ai/api/search-image?query=professional%20female%20nutritionist%20dietitian%20in%20modern%20bright%20clinic%20office%20smiling%20warmly%20wearing%20elegant%20white%20medical%20coat%20holding%20clipboard%20natural%20morning%20sunlight%20bright%20clean%20medical%20environment%20portrait%20photography%20high%20quality%20sharp%20focus&width=600&height=700&seq=about-hero-main-v2&orientation=portrait"
+                src="/images/about-dietitian.png"
                 alt="Diyetisyen Ayşenur Korkmaz"
                 className="w-full h-auto object-cover object-top group-hover:scale-105 transition-transform duration-700"
               />
