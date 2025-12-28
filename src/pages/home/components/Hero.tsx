@@ -91,7 +91,7 @@ const Hero = () => {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/20 to-teal-600/20 z-10"></div>
               <img
-                src="https://readdy.ai/api/search-image?query=professional%20female%20nutritionist%20dietitian%20in%20modern%20clinic%20office%20wearing%20white%20coat%20smiling%20warmly%20holding%20healthy%20food%20clipboard%20natural%20lighting%20bright%20clean%20medical%20environment%20portrait%20photography%20high%20quality&width=600&height=700&seq=hero-dietitian-main&orientation=portrait"
+                src="/images/hero-dietitian.png"
                 alt="Diyetisyen Ayşenur Korkmaz"
                 className="w-full h-auto object-cover object-top"
               />
