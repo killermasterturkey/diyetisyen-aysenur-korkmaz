@@ -2,14 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ═══ Ana site renk değişkenleri ═══ */
+:root {
+  --color-primary: 44 74 62;
+  --color-primary-light: 61 99 82;
+  --color-primary-dark: 26 58 46;
+  --color-accent: 217 119 87;
+  --color-accent-light: 232 155 127;
+  --color-accent-dark: 194 94 63;
+  --color-secondary: 107 138 104;
+  --color-pale: 245 230 211;
+  --color-muted: 139 168 136;
+  --color-dark: 26 58 46;
+}
+
+/* ═══ Detoks tema renkleri ═══ */
+.detoks-theme {
+  --color-primary: 27 94 59;
+  --color-primary-light: 46 125 82;
+  --color-primary-dark: 13 51 32;
+  --color-accent: 67 160 71;
+  --color-accent-light: 76 175 80;
+  --color-accent-dark: 56 142 60;
+  --color-secondary: 46 125 82;
+  --color-pale: 232 245 233;
+  --color-muted: 165 214 167;
+  --color-dark: 13 51 32;
+}
+
 @layer base {
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     @apply text-gray-900 antialiased;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  /* ═══ Detoks A4 sayfa sistemi ═══ */
+  .detoks-page {
+    width: 210mm;
+    height: 297mm;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    page-break-inside: avoid;
+    margin: 2rem auto;
+  }
+
+  .detoks-page-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 5mm 14mm;
+    overflow: visible;
   }
 }
 
@@ -17,7 +68,7 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
-  
+
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -102,5 +153,61 @@
 
   .prose p {
     margin-bottom: 1.5rem;
+  }
+}
+
+/* ═══ Detoks yazdırma stilleri ═══ */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  .detoks-theme {
+    background: white !important;
+  }
+
+  .detoks-theme .detoks-page {
+    margin: 0 !important;
+    padding-top: 0;
+    padding-bottom: 0;
+    page-break-after: always;
+    page-break-inside: avoid;
+    break-after: page;
+    break-inside: avoid;
+    border: none;
+    box-shadow: none !important;
+    overflow: visible !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    min-height: 297mm !important;
+    max-height: 297mm !important;
+  }
+
+  .detoks-theme .detoks-page:last-child,
+  .detoks-theme .detoks-page:last-of-type {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+    margin-bottom: 0 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .detoks-theme * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  .detoks-theme .backdrop-blur-sm {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .detoks-theme .animate-bounce,
+  .detoks-theme .animate-pulse {
+    animation: none !important;
   }
 }

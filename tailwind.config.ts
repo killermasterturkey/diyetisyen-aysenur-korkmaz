@@ -6,15 +6,19 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#2C4A3E',
-          light: '#3D6352',
-          dark: '#1A3A2E',
+          DEFAULT: 'rgb(var(--color-primary) / <alpha-value>)',
+          light: 'rgb(var(--color-primary-light) / <alpha-value>)',
+          dark: 'rgb(var(--color-primary-dark) / <alpha-value>)',
         },
         accent: {
-          DEFAULT: '#D97757',
-          light: '#E89B7F',
-          dark: '#C25E3F',
+          DEFAULT: 'rgb(var(--color-accent) / <alpha-value>)',
+          light: 'rgb(var(--color-accent-light) / <alpha-value>)',
+          dark: 'rgb(var(--color-accent-dark) / <alpha-value>)',
         },
+        secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+        pale: 'rgb(var(--color-pale) / <alpha-value>)',
+        muted: 'rgb(var(--color-muted) / <alpha-value>)',
+        dark: 'rgb(var(--color-dark) / <alpha-value>)',
         cream: {
           DEFAULT: '#F5E6D3',
           light: '#FAF3E8',
@@ -29,6 +33,8 @@ export default {
       fontFamily: {
         serif: ['Playfair Display', 'serif'],
         sans: ['Inter', 'sans-serif'],
+        'dm-sans': ['DM Sans', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
     },
   },

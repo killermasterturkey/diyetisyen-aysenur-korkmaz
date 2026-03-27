@@ -14,6 +14,10 @@ const BlogDetailPage = lazy(() => import('../pages/blog/detail/page'));
 const ContactPage = lazy(() => import('../pages/contact/page'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
+// Detoks sayfaları
+const Detoks0001Page = lazy(() => import('../pages/detoks/0001/page'));
+const Detoks0002Page = lazy(() => import('../pages/detoks/0002/page'));
+
 // Tarif detay sayfaları
 const ProteinPancakeDetail = lazy(() => import('../pages/recipes/detail/protein-pancake'));
 const QuinoaSalataDetail = lazy(() => import('../pages/recipes/detail/quinoa-salata'));
@@ -219,12 +223,22 @@ const routes: RouteObject[] = [
     element: <BlogDetailPage />,
   },
   
+  // Detoks programları
+  {
+    path: '/detoks/0001',
+    element: <Detoks0001Page />,
+  },
+  {
+    path: '/detoks/0002',
+    element: <Detoks0002Page />,
+  },
+
   // İletişim
   {
     path: '/contact',
     element: <ContactPage />,
   },
-  
+
   // 404 - En sonda
   {
     path: '*',
